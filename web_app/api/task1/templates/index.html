@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DSS Test API</title>
+    <!-- meta -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- styles -->
+    <link
+      href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
+      rel="stylesheet"
+    >
+    {% block css %}{% endblock %}
+  </head>
+  <body>
+    <div class="container">
+      <div class="column is-one-third">
+        <br>
+        <h1 class="title">Task 1 Key Metrics</h1>
+        <br>
+        <hr>
+          {% if key_metrics %}
+            <ol>
+              {% for km in key_metrics %}
+                <li>{{km.date}}</li>
+              {% endfor %}
+            </ol>
+          {% else %}
+            <p>No key metrics!</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    </script>
+    {% block js %}{% endblock %}
+  </body>
+</html>
